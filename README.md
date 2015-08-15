@@ -1,7 +1,7 @@
 # ci
 
 CI is a set of practice problems from 
-[Programming Collective Intelligence: Building Smart Web 2.0 Applications](smile.amazon.com/gp/product/0596529325)\*. 
+[Programming Collective Intelligence: Building Smart Web 2.0 Applications](https://smile.amazon.com/gp/product/0596529325)\*. 
 The original examples in the book were written in Python and I've attempted to convert them into idiomatic Clojure. My primary 
 motive is to gain feedback regarding the quality of the Clojure code written. This is not an application, a library, 
 nor full-featured.
