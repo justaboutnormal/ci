@@ -36,7 +36,7 @@
       (reverse))))
 
 (defn need-review [source person]
-  (-> (set (flatten (map (fn [[k v]] (keys v)) source)))
+  (-> (set (mapcat (fn [[k v]] (keys v)) source))
     (c-set/difference (set (map (fn [[k _]] k) person)))))
 
 (defn unreviewed-scores
