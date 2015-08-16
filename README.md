@@ -7,7 +7,7 @@ motive is to gain feedback regarding the quality of the Clojure code written. Th
 nor full-featured.
 
 Currently included problems:
-  * [Product Recommendation Engine](src/ci/reviewer-comparison.clj) pages 29-41 - reviewer-comparison.clj
+  * [Product Recommendation Engine](src/ci/reviewer_comparison.clj) pages 29-41 - reviewer_comparison.clj
     * [tests](test/ci/recommendations_test.clj)
 
 ## Usage
