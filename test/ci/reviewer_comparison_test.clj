@@ -1,7 +1,9 @@
-(ns ci.recommendations-test
+(ns ci.reviewer-comparison-test
   (:require [clojure.test :refer :all]
-   [ci.recommendations :refer :all]))
+   [ci.reviewer-comparison :refer :all]
+   [ci.util :refer :all]))
 
+;Test setup
 (defn mov [m0 m1 m2 m3 m4 m5 m6]
   (into {}
     (filter (fn [[k v]] (not= v nil))
@@ -15,9 +17,7 @@
 
 (def t-source-2 (into {} (filter (fn n-eq [[k v]] (not= :d k)) t-source-1)))
 
-(def t-source-3 {:a {:m1 2 :m2 1}
-                 :b {:m1 4 :m3 5}})
-
+;Tests
 
 (deftest test-pearson-score
   (testing "pearson-cc via sim-scores"
@@ -50,8 +50,3 @@
   (testing "recommend"
     (is (= (recommend t-source-1 :c)
           [[:m5 2.9148633274256976] [:m6 1.4432422182837985]]))))
-
-(deftest test-reverse-ratings
-  (testing "reverse-ratings"
-    (is (= (reverse-ratings {:a {:m1 2}}) {:m1 {:a 2}}))
-    (is (= (reverse-ratings t-source-3) {:m1 {:a 2 :b 4} :m2 {:a 1} :m3 {:b 5}}))))
